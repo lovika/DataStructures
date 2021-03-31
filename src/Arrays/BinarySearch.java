@@ -21,6 +21,21 @@ public class BinarySearch {
         }
     }
 
+    public boolean binSearchIterative(int arr[], int low, int high, int val) {
+        while (low <= high) {
+            int mid = low + (high - low)/2;
+            if (arr[mid] == val) {
+                return true;
+            }
+            if (arr[mid] > val) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return false;
+    }
+
 
     public static void main(String[] args) {
         int arr[] = {1, 2, 3, 4, 5, 7};
@@ -30,7 +45,7 @@ public class BinarySearch {
 
         BinarySearch bs = new BinarySearch();
 
-        boolean found = bs.binSearchElement(arr, low, high, 6);
+        boolean found = bs.binSearchIterative(arr, low, high, 4);
         System.out.println(found);
     }
 }
