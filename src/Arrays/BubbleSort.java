@@ -2,7 +2,7 @@ package Arrays;
 
 /**
  * Bubble Sort
- * Test Cases Verified on gfg (https://bit.ly/3wrdHN4)
+ * Test Cases Verified against (https://bit.ly/3wrdHN4)
  * Author : Lovika Grover
  */
 public class BubbleSort {

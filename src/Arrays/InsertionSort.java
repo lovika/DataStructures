@@ -2,7 +2,7 @@ package Arrays;
 
 /**
  * Insertion Sort
- * Test Cases Verified on gfg : https://practice.geeksforgeeks.org/problems/insertion-sort/1
+ * Test Cases Verified against : https://practice.geeksforgeeks.org/problems/insertion-sort/1
  * Author : Lovika
  */
 public class InsertionSort {

@@ -1,7 +1,8 @@
 package Arrays;
 
-/*
-    Find an item in a sorted list of items
+/**
+ *  Find an item in a sorted list of items
+ *  Author : Lovika Grover
  */
 public class BinarySearch {
 

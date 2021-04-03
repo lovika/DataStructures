@@ -2,7 +2,7 @@ package Arrays;
 
 /**
  * Selection Sort
- * Test Cases Verified on gfg (https://practice.geeksforgeeks.org/problems/selection-sort/1)
+ * Test Cases Verified against (https://practice.geeksforgeeks.org/problems/selection-sort/1)
  * Author : Lovika Grover
  */
 public class SelectionSort {
