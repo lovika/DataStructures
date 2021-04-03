@@ -7,7 +7,7 @@ package Arrays;
  */
 public class BubbleSort {
 
-    public int[] sortArray(int arr[]) {
+    public int[] sortArray(int[] arr) {
         int len = arr.length;
         int[] sortedArr = new int[len];
 
@@ -30,8 +30,8 @@ public class BubbleSort {
 
         BubbleSort bubbleSort = new BubbleSort();
         int[] sortedArr = bubbleSort.sortArray(arr);
-        for (int j : sortedArr)
-            System.out.println(j);
+        for (int element : sortedArr)
+            System.out.println(element);
 
     }
 }

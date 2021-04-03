@@ -31,8 +31,8 @@ public class SelectionSort {
 
         SelectionSort selectionSort = new SelectionSort();
         int[] sortedArr = selectionSort.sortArray(arr);
-        for (int i : sortedArr) {
-            System.out.println(i);
+        for (int element : sortedArr) {
+            System.out.println(element);
         }
     }
 }
