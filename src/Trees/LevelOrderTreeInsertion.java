@@ -7,6 +7,20 @@ import java.util.Queue;
  * https://www.geeksforgeeks.org/insertion-in-a-binary-tree-in-level-order/
  * Author : Lovika Grover
  */
+
+class Node {
+    int data;
+    Node left, right;
+
+    // constructor
+    Node(int key)
+    {
+        this.data = key;
+        left = null;
+        right = null;
+    }
+}
+
 public class LevelOrderTreeInsertion {
     public static void inorder (Node root) {
         if (root == null) {
