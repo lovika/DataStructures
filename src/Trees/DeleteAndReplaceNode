@@ -1,0 +1,75 @@
+/**
+* GFG : https://practice.geeksforgeeks.org/problems/deletion-in-a-binary-tree/1#
+* Delete node in binary tree and replace it with deepest rightmost node
+* Author : Lovika
+**/
+
+
+/*
+Node class is as follows:
+
+class Node {
+    int data;
+    Node left, right;
+    
+    public Node(int data){
+        this.data = data;
+    }
+}
+*/
+class Solution {
+    
+    public Node deletionBT(Node root, int key){
+        //Write your code here and return the root of the changed tree
+        
+        if (root == null) {
+            return null;
+        }
+        if ((root.data == key) && (root.left == null) && (root.right == null))  {
+        return null;
+        }
+        
+        Node keyNode = null;
+        Node tmp = null;
+        Queue<Node> q = new LinkedList<Node>();
+        q.add(root);
+        while(!q.isEmpty()){
+            tmp = q.remove();
+            if (tmp.data == key) {
+                keyNode = tmp;   
+            }
+            if (tmp.left != null) {
+                q.add(tmp.left);
+            }
+            if (tmp.right != null) {
+                q.add(tmp.right);
+            }
+        }
+        
+        if (keyNode != null) {
+            keyNode.data = tmp.data;
+            Queue<Node> qu = new LinkedList<Node>();
+            qu.add(root);
+            while(!qu.isEmpty()) {
+                Node tmp2 = qu.remove();
+                if (tmp2.right != null) {
+                    if (tmp2.right == tmp) {
+                        tmp2.right = null;
+                        return root;
+                    }
+                    qu.add(tmp2.right);
+                }
+                if (tmp2.left != null) {
+                    if (tmp2.left == tmp) {
+                    tmp2.left = null;
+                    return root;
+                    }
+                    qu.add(tmp2.left);
+                }
+                
+            }
+        }
+        return root;
+        
+    }
+}
